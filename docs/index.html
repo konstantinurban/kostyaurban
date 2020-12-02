@@ -179,7 +179,7 @@ h3 {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: scale(0 );
+    transform: scale(0);
 }
 
 img {
@@ -192,11 +192,25 @@ img {
 }
 
 @keyframes flyin {
-  0%   {transform: rotate(0deg);}
-  25%  {transform: rotate(90deg);}
-  50%  {transform: rotate(180deg);}
-  75%  {transform: rotate(270deg);}
-  100% {transform: rotate(360deg);}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .final.show {
@@ -204,6 +218,37 @@ img {
     transform: scale(1);
     transition: all .5s;
 }
+
+.bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    background-image: url('code.gif');
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.msg {
+    position: fixed;
+    left: 30px;
+    top: 50px;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.msg.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /* content END */
 </style>
@@ -218,6 +263,12 @@ img {
             <img src="kaiser.gif">
         </figure>
     </div>
+    <div class="msg">
+        <div class="bubble bubble-bottom-left">
+            ***HACKED***<br><br>
+
+
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>

@@ -52,5 +52,6 @@
 
         function youHaveBeenHacked() {
             $('.final').addClass('show');
+            $('.msg').addClass('show');
         }
     });
